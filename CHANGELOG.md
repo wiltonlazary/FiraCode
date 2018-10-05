@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+#### 1.206 (September 30, 2018)
+
+- Added `<==>` ([#392]), `#:` ([#642]), `!!.` ([#618]), `>:` `:<` ([#605]), U+0305 Combining overline ([#608]), U+2610 Ballot box, U+2611 Ballot box with check, U+2612 Ballot box with x ([#384])
+- Fixed incorrect width of `[` `**` ([#607])
+- Redrew `{|` `|}` `[|` `|]` ([#643])
+- Removed `{.` `.}` ([#635]), thin backslash ([#577])
+- Disabled ligatures in `(?=` `(?<=` `(?:` ([#624]), `>=<` ([#548]), `{|}` `[|]` ([#593])
+- Fixed ligatures precedence in `<||>` ([#621]), `:>=` ([#574]), `<<*>>` `<<<*>>>` `<<+>>` <<<+>>>` `<<$>>` `<<<$>>>` ([#410]), `!=<` ([#276])
+- Fixed incorrectly swapped box drawing characters `╵` and `╷` ([#595])
+- Adjusted vertical position of `<=` `>=` to align with `<` `>` ([#483])
+
 #### 1.205 (February 27, 2018)
 
 - Slashed zero by default ([#481] [#342])

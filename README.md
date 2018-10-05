@@ -8,12 +8,13 @@ Programmers use a lot of symbols, often encoded with several characters. For the
 
 ### Solution
 
-#### [Download v1.205](https://github.com/tonsky/FiraCode/releases/download/1.205/FiraCode_1.205.zip) · [How to install](https://github.com/tonsky/FiraCode/wiki) · [Troubleshooting](https://github.com/tonsky/FiraCode/wiki#troubleshooting) · [News & updates](https://twitter.com/FiraCode)
+#### [Download v1.206](https://github.com/tonsky/FiraCode/releases/download/1.206/FiraCode_1.206.zip) · [How to install](https://github.com/tonsky/FiraCode/wiki) · [Troubleshooting](https://github.com/tonsky/FiraCode/wiki#troubleshooting) · [News & updates](https://twitter.com/FiraCode)
+
+<a href="https://patreon.com/tonsky" target="_blank"><img src="./fira_code_patreon.png"></a>
 
 Fira Code is an extension of the Fira Mono font containing a set of ligatures for common programming multi-character combinations. This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like `..` or `//`, ligatures allow us to correct spacing.
 
 <img src="./showcases/all_ligatures.png">
-
 
 ### Code examples
 
@@ -60,15 +61,16 @@ Swift:
 | ------------------ | ------------------ |
 | **Butterfly**      | **Alacritty**      |
 | **Hyper.app**      | **cmd.exe**        |
-| **iTerm 2** ([since 3.1](https://gitlab.com/gnachman/iterm2/issues/3568#note_13118332)) | **Cmder** |
+| **iTerm 2** ([3.1+](https://gitlab.com/gnachman/iterm2/issues/3568#note_13118332)) | **Cmder** |
 | **Kitty**          | **ConEmu**         |
 | **Konsole**        | **GNOME Terminal** | 
-| **QTerminal**      | **mate-terminal**  |
-| **Terminal.app**   | **mintty**         |
-| **Termux**         | **PuTTY**          |
-| **Token2Shell/MD** | **rxvt**           |
-| **upterm**         | **ZOC** (Windows)  |
-| **ZOC** (macOS)    | **gtkterm, guake, LXTerminal, sakura, Terminator, xfce4-terminal,** and other libvte-based terminals ([bug report](https://bugzilla.gnome.org/show_bug.cgi?id=584160)) |
+| **mintty** ([2.8.3+](https://github.com/mintty/mintty/issues/601))| **mate-terminal** |
+| **QTerminal**      | **PuTTY**          |
+| **Terminal.app**   | **rxvt**           |
+| **Termux**         | **ZOC** (Windows)  |
+| **Token2Shell/MD** | **gtkterm, guake, LXTerminal, sakura, Terminator, xfce4-terminal,** and other libvte-based terminals ([bug report](https://bugzilla.gnome.org/show_bug.cgi?id=584160)) |
+| **upterm**         |
+| **ZOC** (macOS)    |
 
 ### Editor support
 
@@ -132,12 +134,12 @@ Swift:
 
 ```html
 <!-- HTML -->
-<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css">
 ```
 
 ```css
 /* CSS */
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css);
 ```
 
 - IE 10+, Edge: enable with `font-feature-settings: "calt" 1;`
@@ -157,6 +159,7 @@ Swift:
 - [EvilMartians.com](https://evilmartians.com/)
 - [Web Maker](https://webmakerapp.com/)
 - [FromScratch](https://fromscratch.rocks/)
+- [PEP20.org](https://pep20.org/)
 
 ### Alternatives
 
@@ -174,4 +177,3 @@ Other monospaced fonts with ligatures:
 - Author: Nikita Prokopov [@nikitonsky](https://twitter.com/nikitonsky)
 - Based on: [Fira Mono](https://github.com/mozilla/Fira)
 - Inspired by: [Hasklig](https://github.com/i-tu/Hasklig)
-- Software: [Glyphs 2](https://glyphsapp.com) (thx Georg Seifert for a license)
