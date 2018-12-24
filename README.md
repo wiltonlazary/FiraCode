@@ -64,7 +64,7 @@ Swift:
 | **iTerm 2** ([3.1+](https://gitlab.com/gnachman/iterm2/issues/3568#note_13118332)) | **Cmder** |
 | **Kitty**          | **ConEmu**         |
 | **Konsole**        | **GNOME Terminal** | 
-| **mintty** ([2.8.3+](https://github.com/mintty/mintty/issues/601))| **mate-terminal** |
+| **mintty** (partial support [2.8.3+](https://github.com/mintty/mintty/issues/601))| **mate-terminal** |
 | **QTerminal**      | **PuTTY**          |
 | **Terminal.app**   | **rxvt**           |
 | **Termux**         | **ZOC** (Windows)  |
@@ -93,6 +93,7 @@ Swift:
 | **Geany** |
 | **gEdit / Pluma** |
 | **GNOME Builder** |
+| **GoormIDE** ([instructions](https://github.com/tonsky/FiraCode/wiki/GoormIDE-Instructions)) |
 | **IntelliJ IDEA** (2016.2+, [instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions)) |
 | **Kate, KWrite** |
 | **Komodo** |
@@ -123,7 +124,7 @@ Swift:
 | **TextMate 2** |
 | **VimR** ([instructions](https://github.com/qvacua/vimr/wiki#ligatures)) |
 | **Visual Studio 2015** |
-| **Visual Studio 2017** |
+| **Visual Studio 2017** ([instructions](https://github.com/tonsky/FiraCode/wiki/Visual-Studio-2017-Instructions)) |
 | **Visual Studio Code** ([instructions](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)) |
 | **WebStorm** (2016.2+, [instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions)) |
 | **Xamarin Studio/Monodevelop** |
@@ -134,12 +135,12 @@ Swift:
 
 ```html
 <!-- HTML -->
-<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
 ```
 
 ```css
 /* CSS */
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css);
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 ```
 
 - IE 10+, Edge: enable with `font-feature-settings: "calt" 1;`
