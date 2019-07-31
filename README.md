@@ -1,6 +1,6 @@
 ## Fira Code: monospaced font with programming ligatures
 
-<img src="http://s.tonsky.me/imgs/fira_code_logo.svg">
+<img src="./showcases/fira_code_logo.svg">
 
 ### Problem
 
@@ -8,7 +8,7 @@ Programmers use a lot of symbols, often encoded with several characters. For the
 
 ### Solution
 
-#### [Download v1.206](https://github.com/tonsky/FiraCode/releases/download/1.206/FiraCode_1.206.zip) · [How to install](https://github.com/tonsky/FiraCode/wiki) · [Troubleshooting](https://github.com/tonsky/FiraCode/wiki#troubleshooting) · [News & updates](https://twitter.com/FiraCode)
+#### [Download v1.207](https://github.com/tonsky/FiraCode/releases/download/1.207/FiraCode_1.207.zip) · [How to install](https://github.com/tonsky/FiraCode/wiki) · [Troubleshooting](https://github.com/tonsky/FiraCode/wiki#troubleshooting) · [News & updates](https://twitter.com/FiraCode)
 
 <a href="https://patreon.com/tonsky" target="_blank"><img src="./fira_code_patreon.png"></a>
 
@@ -60,16 +60,18 @@ Swift:
 | Works              | Doesn’t work       |
 | ------------------ | ------------------ |
 | **Butterfly**      | **Alacritty**      |
-| **Hyper.app**      | **cmd.exe**        |
-| **iTerm 2** ([3.1+](https://gitlab.com/gnachman/iterm2/issues/3568#note_13118332)) | **Cmder** |
-| **Kitty**          | **ConEmu**         |
-| **Konsole**        | **GNOME Terminal** | 
-| **mintty** (partial support [2.8.3+](https://github.com/mintty/mintty/issues/601))| **mate-terminal** |
-| **QTerminal**      | **PuTTY**          |
-| **Terminal.app**   | **rxvt**           |
+| **crosh** (ChromeOS, [instructions](https://github.com/tonsky/FiraCode/wiki/ChromeOS-Terminal)) | **Windows Console (conhost.exe)** |
+| **Hyper.app**      | **Cmder**          |
+| **iTerm 2** ([3.1+](https://gitlab.com/gnachman/iterm2/issues/3568#note_13118332)) | **ConEmu** |
+| **Kitty**          | **GNOME Terminal** |
+| **Konsole**        | **mate-terminal**  | 
+| **mintty** (partial support [2.8.3+](https://github.com/mintty/mintty/issues/601))| **PuTTY** |
+| **QTerminal**      | **rxvt**           |
+| **Terminal.app**   | **xterm**          |
 | **Termux**         | **ZOC** (Windows)  |
 | **Token2Shell/MD** | **gtkterm, guake, LXTerminal, sakura, Terminator, xfce4-terminal,** and other libvte-based terminals ([bug report](https://bugzilla.gnome.org/show_bug.cgi?id=584160)) |
 | **upterm**         |
+| **Windows Terminal** |
 | **ZOC** (macOS)    |
 
 ### Editor support
@@ -96,6 +98,7 @@ Swift:
 | **GoormIDE** ([instructions](https://github.com/tonsky/FiraCode/wiki/GoormIDE-Instructions)) |
 | **IntelliJ IDEA** (2016.2+, [instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions)) |
 | **Kate, KWrite** |
+| **KDevelop 5+** |
 | **Komodo** |
 | **Leafpad** |
 | **LibreOffice** |
@@ -116,6 +119,7 @@ Swift:
 | **RStudio** ([instructions](https://github.com/tonsky/FiraCode/wiki/RStudio-instructions)) |
 | **RubyMine** (2016.2+, [instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions)) |
 | **Scratch** |
+| **Scribus** (1.5.3+) |
 | **SublimeText** (3146+) |
 | **Spyder IDE** (only with Qt5) |
 | **SuperCollider 3** |
@@ -123,8 +127,7 @@ Swift:
 | **TextEdit** |
 | **TextMate 2** |
 | **VimR** ([instructions](https://github.com/qvacua/vimr/wiki#ligatures)) |
-| **Visual Studio 2015** |
-| **Visual Studio 2017** ([instructions](https://github.com/tonsky/FiraCode/wiki/Visual-Studio-2017-Instructions)) |
+| **Visual Studio** (2015+, [instructions](https://github.com/tonsky/FiraCode/wiki/Visual-Studio-Instructions)) |
 | **Visual Studio Code** ([instructions](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)) |
 | **WebStorm** (2016.2+, [instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions)) |
 | **Xamarin Studio/Monodevelop** |
@@ -135,13 +138,19 @@ Swift:
 
 ```html
 <!-- HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
 ```
 
 ```css
 /* CSS */
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
 ```
+
+```css
+/* Specify in CSS */
+font-family: 'Fira Code', monospace;
+```
+
 
 - IE 10+, Edge: enable with `font-feature-settings: "calt" 1;`
 - Firefox
@@ -172,6 +181,22 @@ Other monospaced fonts with ligatures:
 - [Fixedsys Excelsior](https://github.com/kika/fixedsys) (free)
 - [Iosevka](https://be5invis.github.io/Iosevka/) (free)
 - [DejaVu Sans Code](https://github.com/SSNikolaevich/DejaVuSansCode) (free)
+- [Victor Mono](https://rubjo.github.io/victor-mono/) (free)
+
+### Building Fira Code locally
+
+In case you want to alter FiraCode.glyphs and build OTF/TTF/WOFF files yourself, this is setup I use on macOS:
+
+```bash
+# install all required build tools
+script/bootstrap
+
+# build the font files
+script/build
+
+# install OTFs to ~/Library/Fonts
+script/install
+```
 
 ### Credits
 
