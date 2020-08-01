@@ -1,33 +1,29 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
-source venv/bin/activate
+[ -d venv ] && source venv/bin/activate
 
 # ============================================================================
 # VARIABLE FONT ==============================================================
 
 # variable font
-rm -rf distr/variable_ttf
-fontmake -g FiraCode.glyphs -o variable --output-dir distr/variable_ttf
-
-# -------------------------------------------------------------
-# fix variable font metadata as needed ------------------------
-
 firaCodeVF=distr/variable_ttf/FiraCode-VF.ttf
+
+rm -rf $firaCodeVF
+fontmake -g FiraCode.glyphs -o variable --output-dir distr/variable_ttf
 
 # fix variable font metadata – very important
 gftools fix-vf-meta $firaCodeVF
+mv $firaCodeVF.fix $firaCodeVF
 
 # other fixes for metadata and hinting
 gftools fix-nonhinting $firaCodeVF $firaCodeVF
 gftools fix-gasp --autofix $firaCodeVF
+mv $firaCodeVF.fix $firaCodeVF
+
 gftools fix-dsig --autofix $firaCodeVF
 
 # cleanup of temp files
-tempFiles=$(ls distr/variable_ttf/*.fix && ls distr/variable_ttf/*-gasp*)
-for temp in $tempFiles
-do
-    rm -rf $temp
-done
+rm -rf distr/variable_ttf/*-gasp*
 
 # TODO (late 2019?): use TTFautohint-VF for variable font (current support is minimal)
 
@@ -51,7 +47,7 @@ for file in $statics; do
     echo "TTFautohint " ${file}
     # autohint with detailed info
     hintedFile=${file/".ttf"/"-hinted.ttf"}
-    ttfautohint -I ${file} ${hintedFile} --stem-width-mode nnn
+    ttfautohint -I ${file} ${hintedFile} --stem-width-mode nnn --composites --windows-compatibility
     cp ${hintedFile} ${file}
     rm -rf ${hintedFile}
 done
