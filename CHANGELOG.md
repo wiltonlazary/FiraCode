@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file.
 
+### 7.0
+
+- Fixed overlap in U+2573 ╳ #1414
+
+### 6.2
+
+- Fixed monospaced property #1325
+
+### 6.1
+
+- Fixed hinting settings to match Glyphs export #1315
+
+### 6.0
+
+Unicode:
+
+- Fixed height of `∑` U+2211 N-ARY SUMMATION #1083
+- Added U+2241..U+224B `≁ ≂ ≃ ≄ ≅ ≆ ≇ ≉ ≊ ≋` #1090
+- Added new enclosed characters from Unicode 13 U+0229C `⊜`, U+1F10D `🄍`, U+1F10E `🄎`, U+1F10F `🄏`, U+1F16D `🅭`, U+1F16E `🅮`, U+1F16F `🅯`, U+1F1AD `🆭` #1070
+- Redrew U+27F0..U+27FF Supplemental Arrows-A to be strict monospace `⟲⟳⟴⟵⟶⟷⟸⟹⟺⟻⟼⟽⟾⟿` #1109 #1123
+- Added U+220E End of Proof `∎` #1115
+- Added U+FFFD Replacement Character `�` #1137, thanks @gjvnq
+- Added U+EE00..U+EE0B Progress Bar `` #1182
+- Added U+2237 Proportion `∷` #1219
+- Added U+21AA Rightwards Arrow with Hook `↪` #1307
+  
+Changed:
+
+- Fixed weird look of `::<` `::>` `<::` `>::` #1145
+- `---` now makes a line #1190
+
+Removed:
+
+- C-style compound assignment `>>=` `<<=` `||=` `|=` are not combined with equal sign by default. Old behavior is moved into `ss09` #974
+- Restored short `|` by default, long one moved to `cv30` #843 #1160
+- Moved `.-` into `cv25` #670 #860 #1103
+- Moved `.=` into `cv32` #670
+- Removed named “Retina” instance from FiraCode-VF.ttf (you can still get it by setting `wght=450`) #1318
+
+Added (variants):
+
+- Alternative `a` `cv01` #949
+- Alternative `g` `cv02` #886
+- Alternative `i` `cv03`-`cv06`
+- Alternative `l` `cv07`-`cv10` #899
+- Alternative `0` `cv11`-`cv13`
+- Alternative `3` `cv14`
+- Top-aligned `*` `cv15`
+- Hexagonal `*` `cv16` #708 #1134
+- Top-aligned `~` `cv17`
+- Alternative `%` `cv18`
+- `<=` with a horizontal bar `cv19`
+- `<=` as an arrow `cv20` #34 #696 #858
+- `=<` as less than or equal `cv21` #34
+- `=<` as less than or equal with horizontal bar `cv22` #34
+- `>=` with a horizontal bar `cv23`
+- `/=` as not equals `cv24` #125
+- Added `:-` to `cv26` #790
+- Returned `[]` as `cv27`
+- Returned `{. .}` as `cv28` #875 #635 #409 #279 #264 #214
+- Alternative `{}` `cv29`
+- Returned full ligatures for `Fl` `Tl` `fi` `fj` `fl` `ft` as `ss10`
+- Alternative `()` `cv31` #1198
+
 #### 5.2 (June 12, 2020)
 
 - Fixed hinting problems caused by build_ttf #1075
@@ -23,7 +87,7 @@ All notable changes to this project will be documented in this file.
 - Added `//=` `=//` `=//=` #816 
 - Added U+21B0..U+21B3 `↰ ↱ ↲ ↳`, U+2770..U+2771 `❰ ❱` #1032
 - Fixed U+27F8 `⟸` U+27F9 `⟹` U+27FA `⟺` U+27FD `⟽` U+27FE `⟾` U+27FF `⟿` that were broken in v4 #1067
-- Added ss08 that adds gaps to `==` `===` `!=` `!==` #383
+- Added `ss08` that adds gaps to `==` `===` `!=` `!==` #187 #383
 - Removed OTF from distr to avoid confusion #939
 
 #### 4.0 (May 18, 2020)
@@ -123,7 +187,7 @@ Removed 44 individual arrow ligatures, replaced with four universal, combinative
 - Alternatives (stylistic sets):
   - Lowercase `r` (ss01) [#601]
   - Less than/greater than `<=` `>=` (ss02) [#263] [#617]
-  - Ampersand `&` (ss03) [#617]
+  - Ampersand `&` (ss03) [#371] [#617] 
   - Dollar sign `$` (ss04) [#617]
   - At sign `@` (ss05) [#617] [#748] [#817]
   - Thin backslash (ss06) [#577 #720 #825]
@@ -205,7 +269,7 @@ Removed 44 individual arrow ligatures, replaced with four universal, combinative
 
 #### 1.102
 
-- Support for IntelliJ-based IDEs ([instructions](https://github.com/tonsky/FiraCode/wiki/Intellij-products-instructions))
+- Support for IntelliJ-based IDEs ([instructions](https://github.com/tonsky/FiraCode/wiki/IntelliJ-products-instructions))
 - Turned on autohinting
 
 #### 1.101

@@ -27,7 +27,7 @@ OR
 Use http://brew.sh:
 
     `brew tap homebrew/cask-fonts`
-    `brew cask install font-fira-code`
+    `brew install font-fira-code`
 
 
 Ubuntu Zesty (17.04), Debian Stretch (9) or newer
@@ -54,11 +54,8 @@ Gentoo
 Fedora
 ------
 
-A Fedora copr repository is available: https://copr.fedorainfracloud.org/coprs/evana/fira-code-fonts/. Package sources https://gitlab.com/evana11/fira-code-fonts-fedora.
-
 To install, perform the following commands:
 
-    dnf copr enable evana/fira-code-fonts
     dnf install fira-code-fonts
 
 
@@ -158,21 +155,18 @@ Additionally, if a Color Scheme is selected:
 4. Select Fira Code as "Primary font" under Settings → Editor → Color Scheme → Color Scheme Font
 
 
-BBEdit, TextWrangler
---------------------
+BBEdit
+------
 
-Run in your terminal:
-
-    defaults write com.barebones.bbedit "EnableFontLigatures_Fira Code" -bool YES
-
-Source: https://www.barebones.com/support/bbedit/ExpertPreferences.html
+1. Install FiraCode as per the [macOS installation instructions](https://github.com/tonsky/FiraCode/wiki/Installing#macos)
+2. Open BBEdit preferences, Editor Defaults, assign Fira Code as the Default font
 
 
 Brackets
 --------
 
 1. From the `View` menu choose `Themes....`
-2. Paste `'Fira Code'`, at the begining of `Font Family`
+2. Paste `'Fira Code'`, at the beginning of `Font Family`
 
 
 Emacs
@@ -479,7 +473,7 @@ In a workspace:
         font-family: 'Fira Code';
     }
 
-4. Click Aplly or OK
+4. Click Apply or OK
 5. Happy coding!
 
 

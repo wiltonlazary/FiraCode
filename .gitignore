@@ -1,12 +1,15 @@
 *.zip
-FiraCode_liga.glyphs
-FiraCode_mess.glyphs
 target
 clojure/*.edn
-FiraCode\ (Autosaved).glyphs
 .cpcache
 master_ufo
 instance_ufo
 venv
 .DS_Store
 *.numbers
+
+distr/*/
+
+*.glyphs
+!FiraCode.glyphs
+
