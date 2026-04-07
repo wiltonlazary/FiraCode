@@ -17,3 +17,5 @@ distr/*/
 .idea
 .fleet
 *.iml
+*.glyphspackage
+.vibe

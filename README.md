@@ -2,11 +2,11 @@
 
 ![Fira Code](./extras/logo.svg)
 
-Read in [Español](./LEEME.md) | [简体中文](./README_CN.md) | [日本語](./README_JA.md)
+Read in [Español](./LEEME.md) | [简体中文](./README_CN.md) | [日本語](./README_JA.md) | [Português brasileiro](./LEIAME.md)
 
 ### Problem
 
-Programmers use a lot of symbols, often encoded with several characters. For the human brain, sequences like `->`, `<=` or `:=` are single logical tokens, even if they take two or three characters on the screen. Your eye spends a non-zero amount of energy to scan, parse and join multiple characters into a single logical one. Ideally, all programming languages should be designed with full-fledged Unicode symbols for operators, but that’s not the case yet.
+Programmers use a lot of symbols, often encoded with several characters. For the human brain, sequences like `->`, `<=`, or `:=` are single logical tokens, even if they take two or three characters on the screen. Your eye spends a non-zero amount of energy to scan, parse and join multiple characters into a single logical one. Ideally, all programming languages should be designed with full-fledged Unicode symbols for operators, but that’s not the case yet.
 
 ### Solution
 
@@ -22,26 +22,6 @@ Then:
 - [Troubleshooting](https://github.com/tonsky/FiraCode/wiki#troubleshooting)
 - [News & Updates](https://twitter.com/FiraCode)
 
-### Sponsors
-
-Fira Code is a personal, free-time project with no funding and a huge [feature request backlog](https://github.com/tonsky/FiraCode/issues). If you love it, consider supporting its development via [GitHub Sponsors](https://github.com/sponsors/tonsky) or [Patreon](https://patreon.com/tonsky). Any help counts!
-
-Huge thanks to:
-
-<table>
-  <td align="center">
-    <a href="https://workos.com/?utm_campaign=github_repo&utm_medium=referral&utm_content=firacode&utm_source=github">
-      <div>
-        <img src="https://user-images.githubusercontent.com/629429/151508669-efb4c3b3-8fe3-45eb-8e47-e9510b5f0af1.svg" width="290" alt="WorkOS">
-      </div>
-      <b>Your app, enterprise-ready.</b>
-      <div>
-        <sub>Start selling to enterprise customers with just a few lines of code. Add Single Sign-On (and more) in minutes instead of months.</sup>
-      </div>
-    </a>
-  </td>
-</table>
-
 ### What’s in the box?
 
 Left: ligatures as rendered in Fira Code. Right: same character sequences without ligatures.
@@ -56,7 +36,7 @@ Fira Code is not only about ligatures. Some fine-tuning is done for punctuation 
 
 <img src="./extras/typographics.png" width="754">
 
-Fira Code comes with a few different character variants (`cv01`, `cv02`, etc), stylistic sets (`ss01`, `ss02` , etc) and other font features (`zero`, `onum`, `calt`, etc), so that everyone can choose what’s best for them. [How to enable](https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets)
+Fira Code comes with a few different character variants (`cv01`, `cv02`, etc), stylistic sets (`ss01`, `ss02`, etc), and other font features (`zero`, `onum`, `calt`, etc), so that everyone can choose what’s best for them. [How to enable](https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets)
 
 <img src="./extras/character_variants.png" width="754">
 
@@ -64,7 +44,7 @@ Some ligatures can be altered or enabled using stylistic sets/character variants
 
 <img src="./extras/ligature_variants.png" width="754">
 
-Being a programming font, Fira Code has fantastic support for ASCII/box drawing, powerline and other forms of console UIs:
+Being a programming font, Fira Code has fantastic support for ASCII/box drawing, powerline, and other forms of console UIs:
 
 <img src="./extras/console.png" width="754">
 
@@ -108,6 +88,7 @@ Unicode coverage makes Fira Code a great choice for mathematical writing:
 | **Comma** (Under: Preferences > Editor > Font) |
 | **CotEditor** |
 | **Eclipse** |
+| **EditPad** |
 | **elementary Code** |
 | **Geany** (1.37+) |
 | **gEdit / Pluma** |
@@ -159,27 +140,28 @@ Unicode coverage makes Fira Code a great choice for mathematical writing:
 | **Xcode** (8.0+, otherwise [with plugin](https://github.com/robertvojta/LigatureXcodePlugin)) |
 | **Xi** |
 | Probably work: **Smultron, Vico** | Under question: **Code::Blocks IDE** |
+| **Zed** ([instructions](https://zed.dev/docs/reference/all-settings#buffer-font-family)) | |
 
 ### Terminal compatibility list
 
 | Works | Doesn’t work |
 |-------|--------------|
 | crosh ([instructions](https://github.com/tonsky/FiraCode/wiki/ChromeOS-Terminal)) | Alacritty |
-| Hyper (see [#3607](https://github.com/vercel/hyper/issues/3607)) | Asbru Connection Manager |
-| iTerm 2 | Cmder |
-| Kitty | ConEmu |
-| Konsole | GNOME Terminal ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/192)) |
-| Mintty | gtkterm ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
-| QTerminal | guake ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
-| st ([patch](https://st.suckless.org/patches/ligatures/)) | LXTerminal ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
-| Tabby | mate-terminal |
-| Terminal.app | PuTTY |
-| Termux | rxvt |
-| Token2Shell | sakura ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
-| Wez’s terminal | SecureCRT
-| Windows Terminal | Terminator ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
-| ZOC (macOS) | terminology |
-| | Tilix |
+| Ghostty | Asbru Connection Manager |
+| Hyper (see [#3607](https://github.com/vercel/hyper/issues/3607)) | Cmder |
+| iTerm 2 | ConEmu |
+| Kitty | GNOME Terminal ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/192)) |
+| Konsole | gtkterm ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
+| Mintty | guake ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
+| QTerminal | LXTerminal ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
+| st ([patch](https://st.suckless.org/patches/ligatures/)) | mate-terminal |
+| Tabby | PuTTY |
+| Terminal.app | rxvt |
+| Termux | sakura ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
+| Token2Shell | SecureCRT
+| Wez’s terminal | Terminator ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
+| Windows Terminal | terminology |
+| ZOC (macOS) | Tilix |
 | | Windows Console |
 | | xfce4-terminal ([ticket](https://gitlab.gnome.org/GNOME/vte/-/issues/1661)) |
 | | xterm |
@@ -220,7 +202,6 @@ code { font-family: 'Fira Code', monospace; }
 - [Klipse](http://app.klipse.tech/)
 - [IlyaBirman.net](http://ilyabirman.net/)
 - [EvilMartians.com](https://evilmartians.com/)
-- [Web Maker](https://webmakerapp.com/)
 - [FromScratch](https://fromscratch.rocks/)
 - [PEP20.org](https://pep20.org/)
 

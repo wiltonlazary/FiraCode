@@ -2,7 +2,7 @@
 
 ![Fira Code](./extras/logo.svg)
 
-Leer en [English](./README.md) | [简体中文](./README_CN.md) | [日本語](./README_JA.md)
+Leer en [English](./README.md) | [简体中文](./README_CN.md) | [日本語](./README_JA.md) | [Português brasileiro](./LEIAME.md)
 
 ### El problema
 
@@ -21,12 +21,6 @@ Recursos adicionales (en inglés):
 - [Cómo instalar](https://github.com/tonsky/FiraCode/wiki)
 - [Resolución de problemas](https://github.com/tonsky/FiraCode/wiki#troubleshooting)
 - [Noticias e información](https://twitter.com/FiraCode)
-
-### Contribuyendo
-
-<a href="https://github.com/sponsors/tonsky" target="_blank"><img alt="Contribuye" src="./extras/sponsor_es.png"></a>
-
-Fira Code es un proyecto personal desarrollado en mi tiempo libre, sin financiamiento y con una enorme [lista de solicitudes](https://github.com/tonsky/FiraCode/issues). Si el resultado es de tu agrado, por favor considera apoyar a su desarrollo por medio de [GitHub Sponsors](https://github.com/sponsors/tonsky) o [Patreon](https://patreon.com/tonsky). ¡Cualquier ayuda cuenta!
 
 ### ¿Qué ofrece?
 
